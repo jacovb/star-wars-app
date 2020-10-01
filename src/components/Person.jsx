@@ -1,25 +1,47 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
 import { useParams } from 'react-router-dom';
 
-export default function Person(props) {
-  //neither props nor data works to get data to this component
+export default function Person({ data }) {
   const { person } = useParams();
-  const personProfile = person;
-  console.log(props);
-  return (
-    <Card>
-      <Card.Content>
-        <Card.Header>{personProfile.name}</Card.Header>
-        <Card.Description>
-          <strong>Height</strong>
-          <p>{personProfile.height}</p>
-          <strong>Mass</strong>
-          <p>{personProfile.mass}</p>
-          <strong>Hair Color</strong>
-          <p>{personProfile.hair_color}</p>
-        </Card.Description>
-      </Card.Content>
-    </Card>
-  );
+  const personProfile = data.find(({ name }) => name === person);
+  console.log('render :', personProfile);
+
+  if (personProfile) {
+    return (
+      <div id="itemPerson">
+        <h3>{personProfile.name}</h3>
+
+        <p>
+          <strong>Gender: </strong>
+          {personProfile.gender}
+        </p>
+        <p>
+          <strong>Birth Year: </strong>
+          {personProfile.birth_year}
+        </p>
+        <p>
+          <strong>Eye Color: </strong>
+          {personProfile.eye_color}
+        </p>
+        <p>
+          <strong>Height: </strong>
+          {personProfile.height}
+        </p>
+        <p>
+          <strong>Mass: </strong>
+          {personProfile.mass}
+        </p>
+        <p>
+          <strong>Hair Color: </strong>
+          {personProfile.hair_color}
+        </p>
+        <p>
+          <strong>Home World: </strong>
+          {personProfile.homeworld}
+        </p>
+      </div>
+    );
+  } else {
+    return null;
+  }
 }

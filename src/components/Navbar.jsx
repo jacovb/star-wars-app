@@ -1,35 +1,32 @@
 import React from 'react';
-import { Menu, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <Menu color="yellow" inverted>
-      <Container>
-        <Link to="/">
-          <Menu.Item name="star wars API" position="left" />
-        </Link>
+    <div id="navbar">
+      <Link to="/" id="navButton">
+        Home
+      </Link>
 
-        <Link to="/people">
-          <Menu.Item name="people" />
-        </Link>
+      <Link to="/people" id="navButton">
+        People
+      </Link>
 
-        <Link to="/planets">
-          <Menu.Item name="planets" />
-        </Link>
+      <Link to="/planets" id="navButton">
+        Planets
+      </Link>
 
-        <Link to="/species">
-          <Menu.Item name="species" />
-        </Link>
+      <Link to="/species" id="navButton">
+        Species
+      </Link>
 
-        <Link to="/starships">
-          <Menu.Item name="starships" />
-        </Link>
+      <Link to="/starships" id="navButton">
+        Starships
+      </Link>
 
-        <Link to="/vehicles">
-          <Menu.Item name="vehicles" position="right" />
-        </Link>
-      </Container>
-    </Menu>
+      <Link to="/vehicles" id="navButton">
+        Vehicles
+      </Link>
+    </div>
   );
 }

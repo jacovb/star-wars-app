@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container, Dimmer, Loader } from 'semantic-ui-react';
+import { Dimmer, Loader } from 'semantic-ui-react';
 import Home from './components/Home';
 import People from './components/People';
 import Planets from './components/Planets';
@@ -101,7 +101,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Container>
+        <div id="mainContainer">
           {loading ? (
             <Dimmer active inverted>
               <Loader inverted>Loading</Loader>
@@ -112,7 +112,7 @@ function App() {
                 <Home />
               </Route>
               <Route exact path="/people">
-                <People data={people} />
+                <People data={people} planets={planets} />
               </Route>
               <Route exact path="/planets">
                 <Planets data={planets} />
@@ -131,7 +131,7 @@ function App() {
               </Route>
             </Switch>
           )}
-        </Container>
+        </div>
       </Router>
     </div>
   );
