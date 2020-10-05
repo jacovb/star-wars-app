@@ -10,12 +10,9 @@ export default function Species({ data }) {
           return (
             <div id="item" key={i}>
               <h3>{species.name}</h3>
-              <strong>Language</strong>
-              <p>{species.language}</p>
-              <strong>Height</strong>
-              <p>{species.average_height}</p>
-              <strong>Designation</strong>
-              <p>{species.designation}</p>
+              <p>Language: {species.language}</p>
+              <p>Height: {species.average_height}</p>
+              <p>Designation: {species.designation}</p>
             </div>
           );
         })}

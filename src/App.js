@@ -104,7 +104,9 @@ function App() {
         <div id="mainContainer">
           {loading ? (
             <Dimmer active inverted>
-              <Loader inverted>Loading</Loader>
+              <Loader inverted id="loader">
+                Loading
+              </Loader>
             </Dimmer>
           ) : (
             <Switch>

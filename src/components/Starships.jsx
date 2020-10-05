@@ -9,12 +9,9 @@ export default function Starships({ data }) {
           return (
             <div id="item" key={i}>
               <h3>{starships.name}</h3>
-              <strong>Model</strong>
-              <p>{starships.model}</p>
-              <strong>Length</strong>
-              <p>{starships.length}</p>
-              <strong>Passengers</strong>
-              <p>{starships.passengers}</p>
+              <p>Model: {starships.model}</p>
+              <p>Length: {starships.length}</p>
+              <p>Passengers: {starships.passengers}</p>
             </div>
           );
         })}

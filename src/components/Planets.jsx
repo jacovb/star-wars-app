@@ -9,12 +9,9 @@ export default function Planets({ data }) {
           return (
             <div id="item" key={i}>
               <h3>{planets.name}</h3>
-              <strong>Climate</strong>
-              <p>{planets.climate}</p>
-              <strong>Diameter</strong>
-              <p>{planets.diameter}</p>
-              <strong>Population</strong>
-              <p>{planets.population}</p>
+              <p>Climate: {planets.climate}</p>
+              <p>Diameter: {planets.diameter}</p>
+              <p>Population: {planets.population}</p>
             </div>
           );
         })}

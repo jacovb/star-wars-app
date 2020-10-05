@@ -8,7 +8,22 @@ h1 {
 body {
   margin: 0;
   font-family: 'Space Mono', monospace;
-  background-color: lightcoral;
+  background-color: black;
+  color: white;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 10px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 5px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 10px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 5px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 #navbar {
@@ -26,24 +41,24 @@ body {
 }
 
 #navButton:hover {
-  background-color: yellow;
+  background-color: rgb(238, 255, 0);
   color: black;
 }
 
 #item {
   width: 95%;
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 8px;
-  box-shadow: 1px 1px 4px grey;
+  /* box-shadow: 1px 1px 7px rgb(248, 255, 145); */
+  border-radius: 10px;
   justify-self: center;
   align-self: center;
-  /* background-color: rgb(56, 56, 56); */
-  color: rgb(74, 143, 247);
+  color: rgb(238, 255, 0);
   background: repeating-linear-gradient(
     -45deg,
     #222,
-    #222 1px,
-    #333 1px,
+    #555 2px,
+    #333 2px,
     #333 20px
   );
 }
@@ -52,27 +67,34 @@ body {
   width: 100%;
   max-width: 500px;
   margin: auto;
-  border: 1px solid black;
+  margin-top: 75px;
+  border: 1px solid white;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 1px 1px 4px grey;
-  background-color: white;
-  color: black;
+  /* box-shadow: 1px 1px 4px rgb(72, 54, 236); */
+  color: rgb(238, 255, 0);
+  background: repeating-linear-gradient(
+    -45deg,
+    #222,
+    #555 2px,
+    #333 2px,
+    #333 20px
+  );
 }
 
 #itemContainer {
   display: grid;
-  max-width: 900px;
-  grid-template-columns: 33% auto 33%;
-  column-gap: 15px;
-  row-gap: 10px;
+  max-width: 950px;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 20px;
+  row-gap: 20px;
   justify-items: center;
   margin: auto;
 }
 
 h3 {
   font-family: 'Press Start 2P', cursive;
-  color: rgb(74, 143, 247);
+  color: rgb(238, 255, 0);
 }
 
 #mainContainer {
@@ -82,4 +104,12 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+#homePage p {
+  color: white;
+}
+
+#loader {
+  color: white;
 }
