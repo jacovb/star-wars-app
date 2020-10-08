@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function People({ data }) {
   return (
     <>
-      <h1>People</h1>
+      <h1>Characters</h1>
       <div id="itemContainer">
         {data.map((people, i) => {
           return (

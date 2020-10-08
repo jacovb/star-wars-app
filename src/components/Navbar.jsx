@@ -9,7 +9,7 @@ export default function Navbar() {
       </Link>
 
       <Link to="/people" id="navButton">
-        People
+        Characters
       </Link>
 
       <Link to="/planets" id="navButton">
@@ -26,6 +26,10 @@ export default function Navbar() {
 
       <Link to="/vehicles" id="navButton">
         Vehicles
+      </Link>
+
+      <Link to="/credits" id="navButton">
+        Credits
       </Link>
     </div>
   );

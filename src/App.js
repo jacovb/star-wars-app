@@ -9,6 +9,7 @@ import Species from './components/Species';
 import Starships from './components/Starships';
 import Vehicles from './components/Vehicles';
 import Person from './components/Person';
+import Credits from './components/Credits';
 import './App.css';
 
 function App() {
@@ -99,6 +100,9 @@ function App() {
 
   return (
     <div className="App">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
       <Router>
         <Navbar />
         <div id="mainContainer">
@@ -127,6 +131,9 @@ function App() {
               </Route>
               <Route exact path="/vehicles">
                 <Vehicles data={vehicles} />
+              </Route>
+              <Route exact path="/credits">
+                <Credits />
               </Route>
               <Route exact path="/people/:person">
                 <Person data={people} />
