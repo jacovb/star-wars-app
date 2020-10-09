@@ -116,6 +116,12 @@ a {
   color: white;
 }
 
+#creditMessage {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
 #stars {
   width: 1px;
   height: 1px;
