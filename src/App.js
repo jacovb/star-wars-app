@@ -22,73 +22,93 @@ function App() {
 
   useEffect(() => {
     async function fetchPeople() {
-      let tempPeople = [];
-      let res = await fetch('https://swapi.dev/api/people/');
-      let data = await res.json();
-      tempPeople.push(...data.results);
-      while (data.next) {
-        res = await fetch(data.next);
-        data = await res.json();
+      try {
+        let tempPeople = [];
+        let res = await fetch('https://swapi.dev/api/people/');
+        let data = await res.json();
         tempPeople.push(...data.results);
+        while (data.next) {
+          res = await fetch(data.next);
+          data = await res.json();
+          tempPeople.push(...data.results);
+        }
+        setPeople(tempPeople);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
       }
-      setPeople(tempPeople);
-      setLoading(false);
     }
 
     async function fetchPlanets() {
-      let tempPlanets = [];
-      let res = await fetch('https://swapi.dev/api/planets/');
-      let data = await res.json();
-      tempPlanets.push(...data.results);
-      while (data.next) {
-        res = await fetch(data.next);
-        data = await res.json();
+      try {
+        let tempPlanets = [];
+        let res = await fetch('https://swapi.dev/api/planets/');
+        let data = await res.json();
         tempPlanets.push(...data.results);
+        while (data.next) {
+          res = await fetch(data.next);
+          data = await res.json();
+          tempPlanets.push(...data.results);
+        }
+        setPlanets(tempPlanets);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
       }
-      setPlanets(tempPlanets);
-      setLoading(false);
     }
 
     async function fetchSpecies() {
-      let tempSpecies = [];
-      let res = await fetch('https://swapi.dev/api/species/');
-      let data = await res.json();
-      tempSpecies.push(...data.results);
-      while (data.next) {
-        res = await fetch(data.next);
-        data = await res.json();
+      try {
+        let tempSpecies = [];
+        let res = await fetch('https://swapi.dev/api/species/');
+        let data = await res.json();
         tempSpecies.push(...data.results);
+        while (data.next) {
+          res = await fetch(data.next);
+          data = await res.json();
+          tempSpecies.push(...data.results);
+        }
+        setSpecies(tempSpecies);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
       }
-      setSpecies(tempSpecies);
-      setLoading(false);
     }
 
     async function fetchStarships() {
-      let tempStarships = [];
-      let res = await fetch('https://swapi.dev/api/starships/');
-      let data = await res.json();
-      tempStarships.push(...data.results);
-      while (data.next) {
-        res = await fetch(data.next);
-        data = await res.json();
+      try {
+        let tempStarships = [];
+        let res = await fetch('https://swapi.dev/api/starships/');
+        let data = await res.json();
         tempStarships.push(...data.results);
+        while (data.next) {
+          res = await fetch(data.next);
+          data = await res.json();
+          tempStarships.push(...data.results);
+        }
+        setStarships(tempStarships);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
       }
-      setStarships(tempStarships);
-      setLoading(false);
     }
 
     async function fetchVehicles() {
-      let tempVehicles = [];
-      let res = await fetch('https://swapi.dev/api/vehicles/');
-      let data = await res.json();
-      tempVehicles.push(...data.results);
-      while (data.next) {
-        res = await fetch(data.next);
-        data = await res.json();
+      try {
+        let tempVehicles = [];
+        let res = await fetch('https://swapi.dev/api/vehicles/');
+        let data = await res.json();
         tempVehicles.push(...data.results);
+        while (data.next) {
+          res = await fetch(data.next);
+          data = await res.json();
+          tempVehicles.push(...data.results);
+        }
+        setVehicles(tempVehicles);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
       }
-      setVehicles(tempVehicles);
-      setLoading(false);
     }
 
     fetchPeople();
